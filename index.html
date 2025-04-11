@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hazırlık Puan Hesaplama</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hazırlık Puan Hesaplama</h1>
+    </header>
+    <main>
+      <form id="puanHesaplamaForm">
+        <div class="form-section">
+          <h2>Quiz Notları</h2>
+          <div class="input-group">
+            <label for="quiz1">Listening and Reading (%10):</label>
+            <input
+              type="number"
+              id="quiz1"
+              min="0"
+              max="100"
+              step="0.01"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="quiz2">Writing (%7.5):</label>
+            <input
+              type="number"
+              id="quiz2"
+              min="0"
+              max="100"
+              step="0.01"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="quiz3">Speaking (%7.5):</label>
+            <input
+              type="number"
+              id="quiz3"
+              min="0"
+              max="100"
+              step="0.01"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="homework">Homework (%5):</label>
+            <input
+              type="number"
+              id="homework"
+              min="0"
+              max="100"
+              step="0.01"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Vize ve Final</h2>
+          <div class="input-group">
+            <label for="midterm">Midterm (%30):</label>
+            <input
+              type="number"
+              id="midterm"
+              min="0"
+              max="100"
+              step="0.01"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="final">Final (%40):</label>
+            <input
+              type="number"
+              id="final"
+              min="0"
+              max="100"
+              step="0.01"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Hazırlık Atlama Sınavları</h2>
+          <div class="input-group">
+            <label for="test">Test (%25):</label>
+            <input
+              type="number"
+              id="test"
+              min="0"
+              max="100"
+              step="0.01"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="writing">Writing (%25):</label>
+            <input
+              type="number"
+              id="writing"
+              min="0"
+              max="100"
+              step="0.01"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="speaking">Speaking (%15):</label>
+            <input
+              type="number"
+              id="speaking"
+              min="0"
+              max="100"
+              step="0.01"
+              required
+            />
+          </div>
+        </div>
+
+        <button type="submit">Puanı Hesapla</button>
+      </form>
+
+      <div id="sonuc" class="sonuc-container">
+        <h2>Hesaplama Sonucu</h2>
+        <div class="sonuc-detay">
+          <h3>İlk Bölüm Hesaplaması</h3>
+          <div class="sonuc-item">
+            <span>Listening and Reading (%10):</span>
+            <span id="quiz1Sonuc">-</span>
+          </div>
+          <div class="sonuc-item">
+            <span>Writing (%7.5):</span>
+            <span id="quiz2Sonuc">-</span>
+          </div>
+          <div class="sonuc-item">
+            <span>Speaking (%7.5):</span>
+            <span id="quiz3Sonuc">-</span>
+          </div>
+          <div class="sonuc-item">
+            <span>Homework (%5):</span>
+            <span id="homeworkSonuc">-</span>
+          </div>
+          <div class="sonuc-item">
+            <span>Midterm (%30):</span>
+            <span id="midtermSonuc">-</span>
+          </div>
+          <div class="sonuc-item">
+            <span>Final (%40):</span>
+            <span id="finalSonuc">-</span>
+          </div>
+          <div class="sonuc-item toplam">
+            <span>İlk Bölüm Toplamı:</span>
+            <span id="ilkBolumToplam">-</span>
+          </div>
+          <div class="sonuc-item">
+            <span>İlk Bölüm %35'i:</span>
+            <span id="ilkBolumYuzde">-</span>
+          </div>
+        </div>
+
+        <div class="sonuc-detay">
+          <h3>Hazırlık Atlama Sınavları</h3>
+          <div class="sonuc-item">
+            <span>Test (%25):</span>
+            <span id="testSonuc">-</span>
+          </div>
+          <div class="sonuc-item">
+            <span>Writing (%25):</span>
+            <span id="writingSonuc">-</span>
+          </div>
+          <div class="sonuc-item">
+            <span>Speaking (%15):</span>
+            <span id="speakingSonuc">-</span>
+          </div>
+          <div class="sonuc-item toplam">
+            <span>Hazırlık Atlama Toplamı:</span>
+            <span id="hazirlikToplam">-</span>
+          </div>
+        </div>
+
+        <div class="sonuc-item final-toplam">
+          <span>Final Toplam Puan:</span>
+          <span id="toplamPuan">-</span>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        &copy; 2020 - <span id="currentYear"></span>| Hazırlık Puan Hesaplama.
+        <a href="https://erayefekutlu.com" target="_blank">Eray Efek Kutlu</a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
