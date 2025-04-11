@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const currentYear = new Date().getFullYear();
   document.querySelector(
     "footer p"
-  ).innerHTML = `&copy; ${currentYear} Hazırlık Puan Hesaplama. Tüm hakları saklıdır.`;
+  ).innerHTML = `&copy; 2020 - ${currentYear} Hazırlık Puan Hesaplama. <a href="https://erayefekutlu.com" target="_blank">Eray Efek Kutlu</a>`;
 });
 
 document
